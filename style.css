@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family:'Gilroy';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    padding-top: 10VW;
+    background-color: #1515;
+}
+#slider{
+    height: 80%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+#slider::-webkit-scrollbar{
+    display: none;
+}
+.bottom{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    animation-name:scroller ;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroller {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.bottom .elem{ 
+    position: relative;
+    height: 100%;
+    width: 18%;
+    border-radius: 35px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 13px;
+}
+.bottom .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
